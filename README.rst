@@ -28,9 +28,7 @@ Although, *NiftyPET* is dedicated to high-throughput image reconstruction and an
 
 This software platform covers the entire processing pipeline, from the raw list-mode (LM) PET data through to the final image statistic of interest (e.g., regional SUV), including LM bootstrapping and multiple reconstructions to facilitate voxel-wise estimation of uncertainties.
 
-The full documentation with installation manual and tutorials can be found here:
-
-https://niftypet.readthedocs.io/
+**Documentation with installation manual and tutorials**: https://niftypet.readthedocs.io/
 
 
 Author: Pawel J. Markiewicz @ University College London
