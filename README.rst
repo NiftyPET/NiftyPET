@@ -5,9 +5,8 @@ NiftyPET: High-throughput image reconstruction and analysis
 .. image:: https://readthedocs.org/projects/niftypet/badge/?version=latest
 
 
-.. rubric::
   
-  **Documentation**: https://niftypet.readthedocs.io/
+**Documentation**: https://niftypet.readthedocs.io/
    
 
 *NiftyPET* is a software platform and a Python namespace package (encompassing sub-packages), offering high-throughput PET image reconstruction with high quantitative accuracy and precision as well as image manipulation, processing and analysis for PET/MR imaging.  The core routines are written in CUDA C and embedded in Python C extensions.
