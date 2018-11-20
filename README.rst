@@ -3,7 +3,8 @@ NiftyPET: High-throughput image reconstruction and analysis
 ===========================================================
 
 .. image:: https://readthedocs.org/projects/niftypet/badge/?version=latest
-
+  :target: https://niftypet.readthedocs.io/en/latest/?badge=latest
+  :alt: Documentation Status
 
   
 **Documentation**: https://niftypet.readthedocs.io/
