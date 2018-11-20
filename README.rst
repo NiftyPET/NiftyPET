@@ -2,6 +2,8 @@
 NiftyPET: High-throughput image reconstruction and analysis
 ===========================================================
 
+|docs|
+
 *NiftyPET* is a Python software platform, offering high-throughput PET image reconstruction (``nipet`` -- a core package of NiftyPET: https://github.com/pjmark/NIPET) as well as image manipulation, processing and analysis (``nimpa``: https://github.com/pjmark/NIMPA) for PET/MR imaging with high quantitative accuracy and precision. The software is written in CUDA C and embedded in Python C extensions.
 
 The scientific aspects of this software are covered in two open-access publications:
