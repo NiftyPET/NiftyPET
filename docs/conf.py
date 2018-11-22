@@ -152,6 +152,16 @@ html_static_path = ['_static']
 #     ]
 # }
 
+#==================================================
+# my test for bibtex files:
+import os
+cpth = os.path.realpath(__file__)
+fpth = os.path.join(cpth,'refs','niftypet_docs.bib')
+if os.path.isfile(fpth):
+    print('>>>>> FOUND THE FILE:', fpth)
+else:
+    print('>>>>> COUND NOT FIND:', fpth)
+#==================================================
 
 # -- Options for HTMLHelp output ------------------------------------------
 
