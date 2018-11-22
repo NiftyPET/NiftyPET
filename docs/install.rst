@@ -200,7 +200,7 @@ Alternatively, it can also be downloaded with an `SSH` key pair setup:
   git clone git@github.com:pjmark/NIMPA.git
   git clone git@github.com:pjmark/NIPET.git
 
-After a successful download, navigate to folder ``nimpa`` and run inside one of the folder the following:
+After a successful download, navigate to folder ``nimpa`` and run inside one of the following:
 
 ::
 
