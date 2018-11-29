@@ -25,7 +25,7 @@ Installation
 
       cd ./NIMPA
       pip install --no-binary :all: --verbose -e .
-      cd ../NiftyPET
+      cd ../NIPET
       pip install --no-binary :all: --verbose -e .
 
 
