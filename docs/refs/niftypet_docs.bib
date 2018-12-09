@@ -1,21 +1,16 @@
-@article{Markiewicz2016,
-abstract = {In this technical note we propose a rapid and scalable software solution for the processing of PET list-mode data, which allows the efficient integration of list mode data processing into the workflow of image reconstruction and analysis. All processing is performed on the graphics processing unit (GPU), making use of streamed and concurrent kernel execution together with data transfers between disk and CPU memory as well as CPU and GPU memory. This approach leads to fast generation of multiple bootstrap realisations, and when combined with fast image reconstruction and analysis, it enables assessment of uncertainties of any image statistic and of any component of the image generation process (e.g. random correction, image processing) within reasonable time frames (e.g. within five minutes per realisation). This is of particular value when handling complex chains of image generation and processing. The software outputs the following: (1) estimate of expected random event data for noise reduction; (2) dynamic prompt and random sinograms of span-1 and span-11 and (3) variance estimates based on multiple bootstrap realisations of (1) and (2) assuming reasonable count levels for acceptable accuracy. In addition, the software produces statistics and visualisations for immediate quality control and crude motion detection, such as: (1) count rate curves; (2) centre of mass plots of the radiodistribution for motion detection; 3) video of dynamic projection views for fast visual list-mode skimming and inspection; (4) full normalisation factor sinograms. To demonstrate the software, we present an example of the above processing for fast uncertainty estimation of regional SUVR (standard uptake value ratio) calculation for a single PET scan of F-18-florbetapir using the Siemens Biograph mMR scanner.},
-author = {Markiewicz, P J and Thielemans, K and Schott, J M and Atkinson, D and Arridge, S R and Hutton, B F and Ourselin, S},
-doi = {10.1088/0031-9155/61/13/N322},
-file = {:Users/pawel-mac/Documents/Mendeley Desktop/Markiewicz et al. - 2016 - Rapid processing of PET list-mode data for efficient uncertainty estimation and data analysis.pdf:pdf},
-issn = {13616560},
-journal = {Physics in Medicine and Biology},
-keywords = {fast data processing,graphics processing unit,histogramming,list mode,motion detection,posistron emission tomography,projection views},
-month = {jul},
-number = {13},
-pages = {N322--N336},
-pmid = {27280456},
-publisher = {IOP Publishing},
-title = {{Rapid processing of PET list-mode data for efficient uncertainty estimation and data analysis}},
-url = {http://stacks.iop.org/0031-9155/61/i=13/a=N322?key=crossref.817e85ee0602e878b69ace94c186e0cb},
-volume = {61},
-year = {2016}
+
+
+@Article{Markiewicz2016,
+  Title                    = {{Rapid processing of PET list-mode data for efficient uncertainty estimation and data analysis}},
+  Author                   = {Markiewicz, P J and Thielemans, K and Schott, J M and Atkinson, D and Arridge, S R and Hutton, B F and Ourselin, S},
+  Journal                  = {Physics in Medicine and Biology},
+  Year                     = {2016},
+  Number                   = {13},
+  Pages                    = {N322--N336},
+  Volume                   = {61},
+  Doi                      = {10.1088/0031-9155/61/13/N322},
 }
+
 @article{Keereman2010,
 abstract = {One of the challenges in PET/MRI is the derivation of an attenu-ation map to correct the PET image for attenuation. Different methods have been suggested for deriving the attenuation map from an MR image. Because the low signal intensity of cor-tical bone on images acquired with conventional MRI sequences makes it difficult to detect this tissue type, these methods rely on some sort of anatomic precondition to predict the attenuation map, raising the question of whether these methods will be us-able in the clinic when patients may exhibit anatomic abnormal-ities. Methods: We propose the use of the transverse relaxation rate, derived from images acquired with an ultrashort echo time sequence to classify the voxels into 1 of 3 tissue classes (bone, soft tissue, or air), without making any assumptions on patient anatomy. Each voxel is assigned a linear attenuation coefficient corresponding to its tissue class. A reference CT scan is used to determine the voxel-by-voxel accuracy of the proposed method. The overall accuracy of the MRI-based attenuation correction is evaluated using a method that takes into account the nonlocal ef-fects of attenuation correction. Results: As a proof of concept, the head of a pig was used as a phantom for imaging. The new method yielded a correct tissue classification in 90{\%} of the vox-els. Five human brain PET/CT and MRI datasets were also pro-cessed, yielding slightly worse voxel-by-voxel performance, compared to a CT-derived attenuation map. The PET datasets were reconstructed using the segmented MRI attenuation map derived with the new method, and the resulting images were compared with segmented CT-based attenuation correction. An average error of around 5{\%} was found in the brain. Conclusion: The feasibility of using the transverse relaxation rate map derived from ultrashort echo time MR images for the estimation of the at-tenuation map was shown on phantom and clinical brain data. The results indicate that the new method, compared with CT-based attenuation correction, yields clinically acceptable errors. The proposed method does not make any assumptions about patient anatomy and could therefore also be used in cases in which anatomic abnormalities are present.},
 author = {Keereman, Vincent and Fierens, Yves and Broux, Tom and {De Deene}, Yves and Lonneux, Max and Vandenberghe, Stefaan},
