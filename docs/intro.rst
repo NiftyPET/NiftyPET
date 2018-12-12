@@ -47,7 +47,7 @@ Software infrastructure
 
    Infrastructure for standalone PET image reconstruction and analysis of PET/MR brain data using amyloid PET tracer.  The processing stages (**A-H**) are explained below.  The asterisk (∗) indicates external software packages.
 
-For demonstration purposes, all the processing stages presented in the above figure use an amyloid brain scan acquired on the Siemens Biograph mMR. The participant was taking part in “Insight 46”--a neuroscience sub-study of the Medical Research Council National Survey of Health and Development :cite:`Lane2017`. 
+For demonstration purposes, all the processing stages presented in the above figure use an amyloid brain scan acquired on the Siemens Biograph mMR. The participant was taking part in “Insight 46”--a neuroscience sub-study of the Medical Research Council National Survey of Health and Development :cite:`Lane2017` [#f3]_. 
 
 The input data include the attenuation coefficient maps (:math:`\mu`-maps) of the hardware and subject (stage **A**), normalisation component data (stage **B**) and the list-mode data (stage **C**).  Optionally, T1 and/or T2 weighted MR images are provided for brain parcellation used in reconstruction and analysis stage **D** and partial volume correction (PVC) stage **F**.  The T1w image is also used for generating an accurate subject's :math:`\mu`-map.  
 
@@ -68,3 +68,7 @@ Great emphasis was put on the quantitative image reconstruction and analysis in 
 .. rubric:: Footnotes
 .. [#f1] Currently Python 2.7 is supported, while Python 3 support is intended for the next major release
 .. [#f2] Currently the GE Signa is not yet fully supported in *NiftyPET*.
+
+
+.. rubric:: References
+.. [#f3] Lane, C. A., Parker, T. D., Cash, D. M., Macpherson, K., Donnachie, E., Murray-Smith, H., … Schott, J. M. (2017). Study protocol: Insight 46 - a neuroscience sub-study of the MRC National Survey of Health and Development. BMC Neurology, 17(1), 75. https://doi.org/10.1186/s12883-017-0846-x

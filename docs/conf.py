@@ -94,12 +94,12 @@ todo_include_todos = False
 #html_theme = 'alabaster'
 
 #--------------------------
-# import sphinx_rtd_theme
-# html_theme = "sphinx_rtd_theme"
-# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-# html_theme_options = {
-#     'logo_only': False,  # if we have a html_logo below, this shows /only/ the logo with no title text
-# }
+import sphinx_rtd_theme
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_options = {
+    'logo_only': False,  # if we have a html_logo below, this shows /only/ the logo with no title text
+}
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.

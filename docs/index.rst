@@ -22,7 +22,7 @@ The scientific aspects of this software are covered in two open-access publicati
    intro
    install
    tutorial
-   bibref
+   zbibref
 
 
 .. rubric:: Acknowledgements
