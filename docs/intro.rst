@@ -3,7 +3,7 @@
 Introduction
 ============
 
-*NiftyPET* is an open source software solution for standalone PET image reconstruction and analysis.  The key computational routines are written in CUDA C for high-throughput processing on NVIDIA GPU devices.  The routines are then embedded in Python C extensions to be readily available for high level programming in Python [#f1]_.
+*NiftyPET* is an open source software solution for standalone PET image reconstruction and analysis.  The key computational routines are written in CUDA C for high-throughput processing on NVIDIA GPU devices.  The routines are then embedded in Python C extensions to be readily available for high level programming in Python [*]_.
 
 ---
 Aim
@@ -19,7 +19,7 @@ The ``nipet`` (neuro-imaging PET) Python package contains all the routines neede
 
 The ``nimpa`` (neuro-image manipulation, processing and analysis) package contains all the routines for image input/output, image trimming and up-sampling for regional signal extraction (e.g. from a region of interest--ROI), image registration, and importantly, for partial volume correction (PVC). 
 
-The key aspect of ``nipet`` is the fast LM processing for efficient uncertainty estimation of statistic based on image or projection data.  Significant emphasis in placed on reconstruction for scanners with extended axial field of view (FOV), such as the latest PET/MR systems, e.g., the Siemens Biograph `mMR`_ or the GE `Signa`_ [#f2]_.
+The key aspect of ``nipet`` is the fast LM processing for efficient uncertainty estimation of statistic based on image or projection data.  Significant emphasis in placed on reconstruction for scanners with extended axial field of view (FOV), such as the latest PET/MR systems, e.g., the Siemens Biograph `mMR`_ or the GE `Signa`_ [*]_.
 
 The processing chains include:
 
@@ -66,5 +66,5 @@ Great emphasis was put on the quantitative image reconstruction and analysis in 
 
 
 .. rubric:: Footnotes
-.. [#f1] Currently Python 2.7 is supported, while Python 3 support is intended for the next major release
-.. [#f2] Currently the GE Signa is not yet fully supported in *NiftyPET*.
+.. [*] Currently Python 2.7 is supported, while Python 3 support is intended for the next major release
+.. [*] Currently the GE Signa is not yet fully supported in *NiftyPET*.
