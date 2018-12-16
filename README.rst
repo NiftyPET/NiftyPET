@@ -16,8 +16,6 @@ NiftyPET: High-throughput image reconstruction and analysis
 .. |pic2| image:: ./docs/images/gim_magna_c.gif
    :width: 45%
 
-
-
 .. ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .. taken from docs/highlights.rst
 
