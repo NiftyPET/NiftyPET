@@ -19,7 +19,7 @@ NiftyPET: High-throughput image reconstruction and analysis
 .. ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .. taken from docs/highlights.rst
 
-*NiftyPET* is a software platform and a Python namespace package encompassing sub-packages for high-throughput PET image reconstruction, manipulation, processing and analysis with high quantitative accuracy and precision.  See below for the description of the above image reconstructed using *NiftyPET* [*]_.  
+*NiftyPET* is a software platform and a Python namespace package encompassing sub-packages for high-throughput PET image reconstruction, manipulation, processing and analysis with high quantitative accuracy and precision.  See below for the description of the above image, reconstructed using *NiftyPET* [*]_.  
 
 *NiftyPET* includes two packages:
 
@@ -37,7 +37,7 @@ Although, *NiftyPET* is dedicated to high-throughput image reconstruction and an
 This software platform covers the entire processing pipeline, from the raw list-mode (LM) PET data through to the final image statistic of interest (e.g., regional SUV), including LM bootstrapping and multiple independent reconstructions to facilitate voxel-wise estimation of uncertainties.
 
 
-.. [*] The above dynamic transaxial and coronal images show the activity of  :sup:`18`\ F-florbetapir during the one-hour dynamic acquisition.  Note the tendency of the signal becoming limited to the white matter of the brain, which is typical of negative amyloid beta (A :math:`\beta`) scan.
+.. [*] The above dynamic transaxial and coronal images show the activity of  :sup:`18`\ F-florbetapir during the one-hour dynamic acquisition.  Note the tendency of the signal becoming limited to the white matter of the brain, which is typical of negative amyloid beta (Abeta) scan.
 
 .. ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
