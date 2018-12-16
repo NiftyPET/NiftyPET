@@ -10,7 +10,6 @@ NiftyPET: High-throughput image reconstruction and analysis
 
 
 .. image:: docs/images/gim_magna_t.gif
-
 .. image:: docs/images/gim_magna_c.gif
 
 
