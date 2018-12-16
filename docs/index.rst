@@ -1,33 +1,55 @@
+===========================================================
+NiftyPET: High-throughput image reconstruction and analysis
+===========================================================
 
-Welcome to *NiftyPET*
-=====================
+|pic1| |pic2|
 
-.. image:: images/gim_magna_t.gif
 
-.. image:: images/gim_magna_c.gif
+.. |pic1| image:: images/gim_magna_t.gif
+   :width: 45%
 
-*NiftyPET* is a Python software package, offering high-throughput PET image reconstruction and analysis for high quantitative accuracy and precision. The package is written in CUDA C and embedded in Python C extensions.
+.. |pic2| image:: images/gim_magna_c.gif
+   :width: 45%
 
-The scientific aspects of this software are covered in two open-access publications:
 
-* *NiftyPET: a High-throughput Software Platform for High Quantitative Accuracy and Precision PET Imaging and Analysis* (2017) Neuroinformatics,  https://doi.org/10.1007/s12021-017-9352-y
-
-* *Rapid processing of PET list-mode data for efficient uncertainty estimation and data analysis* (2016) Physics in Medicine & Biology, https://doi.org/10.1088/0031-9155/61/13/N322
+.. include:: highlights.rst
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Documentation:
 
    intro
    install
-   tutorial
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials
+
+   tutorials/gpuaccess.rst
+   tutorials/basicrecon.rst
+   
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Open-source Data
+
+   data
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Bibliography
+
    zbibref
 
 
 .. rubric:: Acknowledgements
   
 We gratefully acknowledge the support of NVIDIA Corporation with the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work.
+
 
 
 .. Indices and tables

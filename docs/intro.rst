@@ -3,7 +3,7 @@
 Introduction
 ============
 
-*NiftyPET* is an open source software solution for standalone PET image reconstruction and analysis.  The key computational routines are written in CUDA C for high-throughput processing on NVIDIA GPU devices.  The routines are then embedded in Python C extensions to be readily available for high level programming in Python [*]_.
+*NiftyPET* is an open source software solution for standalone and high-throughput PET image reconstruction and analysis.  The key computational routines are written in CUDA C for fast and efficient processing on NVIDIA GPU devices.  The routines are then embedded in Python C extensions to be readily available for high level programming in Python [*]_.
 
 ---
 Aim

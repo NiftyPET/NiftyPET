@@ -1,141 +1,15 @@
 
-========
-Tutorial
-========
+===============================
+Basic PET image reconstruction
+===============================
 
-
-GPU device info in IPython
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-`IPython <https://ipython.readthedocs.io/en/stable/index.html>`_ is an interactive Python prompt, particularly useful for PET/MR imaging.  Start IPython by issuing ``ipython`` in the terminal to obtain the following::
-
-  Python 2.7.15 |Anaconda custom (64-bit)| (default, May  1 2018, 23:32:55) 
-  Type "copyright", "credits" or "license" for more information.
-
-  IPython 5.7.0 -- An enhanced Interactive Python.
-  ?         -> Introduction and overview of IPython's features.
-  %quickref -> Quick reference.
-  help      -> Python's own help system.
-  object?   -> Details about 'object', use 'object??' for extra details.
-
-  In [1]: 
-
-.. note:: At this stage Python 2.7 is supported.  Support for Python 3 is coming soon.
-
-
-
-Import ``nimpa`` package from Python *NiftyPET* namespace and run the :
-
-.. code-block:: python
-
-  from niftypet import nimpa
-  nimpa.gpuinfo()
-
-which for two NVIDIA GPU devices used for this documentation (TITAN Xp and Quadro K4200) will produce::
-
-  In [1]: from niftypet import nimpa
-    ...:  nimpa.gpuinfo()
-    ...: 
-  Out[1]: [('TITAN X (Pascal)', 12788L, 6L, 1L), ('Quadro K4200', 4231L, 3L, 0L)]
-
-  In [2]: 
-
-Please note that only the first device is supported, i.e., the compute capability is ``>=3.5``::
-
-  In [3]: nimpa.gpuinfo()[0][2:]
-  Out[3]: (6L, 1L)
-
-
-The same fuction is available in ``nipet``, i.e.:
-
-.. code-block:: python
-
-  from niftypet import nipet
-  nipet.gpuinfo()
-
-
-It's also possible to get extended information about the installed GPU devices by running either
-
-.. code-block:: python
-
-  nipet.gpuinfo(extended=True)
-
-or
-
-.. code-block:: python
-
-  nimpa.gpuinfo(extended=True)
-
-
-For the above GPU devices, the following will be obtained::
-  
-  In [4]: nimpa.gpuinfo(extended=True)
-  i> there are 2 GPU devices.
-
-  ----------------------------------------
-  CUDA device: TITAN X (Pascal), ID = 0
-  ----------------------------------------
-  i> total memory [MB]:12788.50
-  i> shared memory/block [kB]:   49.15
-  i> registers (32bit)/thread block: 65536
-  i> warp size: 32
-  i> compute capability: 6.1
-  i> clock rate [MHz]: 1531.00
-  i> ECC enabled? 0
-  i> max # threads/block: 1024
-
-  i> Memory available: 12788.50[MB]
-     Used: 504.37[MB] 
-     Free:12284.13[MB]
-
-
-  ----------------------------------------
-  CUDA device: Quadro K4200, ID = 1
-  ----------------------------------------
-  i> total memory [MB]:4231.99
-  i> shared memory/block [kB]:   49.15
-  i> registers (32bit)/thread block: 65536
-  i> warp size: 32
-  i> compute capability: 3.0
-  i> clock rate [MHz]:  784.00
-  i> ECC enabled? 0
-  i> max # threads/block: 1024
-
-  i> Memory available: 4231.99[MB]
-     Used:1117.06[MB] 
-     Free:3114.93[MB]
-
-  [('TITAN X (Pascal)', 12788L, 6L, 1L), ('Quadro K4200', 4231L, 3L, 0L)]
-  Out[4]: [('TITAN X (Pascal)', 12788L, 6L, 1L), ('Quadro K4200', 4231L, 3L, 0L)]
-
-
-
-
-Download amyloid brain PET data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The single scan raw amyloid PET data with all the necessary input components as mentioned above, can be obtain from research data repository **Zenodo** (click the DOI link to download the data):
-
-  .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1472951.svg
-    :target: https://doi.org/10.5281/zenodo.1472951
-
-
-The downloaded zip file contains a full dynamic list-mode PET data acquired on a `Siemens Biograph mMR <https://www.healthcare.siemens.co.uk/magnetic-resonance-imaging/mr-pet-scanner/biograph-mmr>`_ for 60 minutes, using amyloid tracer :sup:`18`\ F-florbetapir, provided by `Avid Radiopharmaceuticals, Inc., a wholly owned subsidiary of Lilly <https://investor.lilly.com/news-releases/news-release-details/lilly-joins-imaging-dementia-evidence-amyloid-scanning-ideas>`_.  The file also includes normalisation files and the :math:`\mu`-map based on MR Ultrashort TE (UTE) sequence :cite:`Robson2003,Keereman2010`, all three parts needed for an independent image reconstruction using NiftyPET.
-
-
-Basic PET image reconstruction of PET amyloid scan
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-For basic image reconstruction, *NiftyPET* requires:
+For basic Siemens Biograph mMR image reconstruction, *NiftyPET* requires:
 
   (1) PET list-mode data;
   (2) component-based normalisation file(s);
   (3) the :math:`\mu`-map image (the linear attenuation map as a 3D image).
 
-which are provided in the above mentioned zip file.
-
+An example of downloadable raw PET data of amyloid brain scan is provided in :ref:`data-section` :cite:`Markiewicz2018c`.
 
 
 Initialisation
@@ -159,10 +33,10 @@ Prior to dealing with the raw input data, required packages need to be imported 
 
 
 
-Sorting and classification data
---------------------------------
+Sorting and classification of input data
+----------------------------------------
 
-All the part of the input data is aimed to be automatically recognised in sorted in Python dictionary.  This can be obtained by providing a path to the folder with the unzipped above file with raw PET data in order to explore the input while storing the results in dictionary ``datain``:
+All the part of the input data is aimed to be automatically recognised and sorted in Python dictionary.  This can be obtained by providing a path to the folder containing the unzipped file of the freely provided raw PET data in :ref:`data-section`.  The data is then automatically explored and sorted in the output dictionary ``datain``:
 
 .. code-block:: python
   
