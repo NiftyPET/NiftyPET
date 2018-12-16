@@ -16,7 +16,7 @@ NiftyPET: High-throughput image reconstruction and analysis
 .. |pic2| image:: ./docs/images/gim_magna_c.gif
    :width: 45%
 
-.. include:: ./docs/highlights.rst
+.. include:: docs/highlights.rst
 
 **Documentation with installation manual and tutorials**: https://niftypet.readthedocs.io/
 
