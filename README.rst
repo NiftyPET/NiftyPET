@@ -19,7 +19,7 @@ NiftyPET: High-throughput image reconstruction and analysis
 .. ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 .. taken from docs/highlights.rst
 
-*NiftyPET* is a software platform and a Python namespace package encompassing sub-packages for high-throughput PET image reconstruction, manipulation, processing and analysis with high quantitative accuracy and precision.  See below for the above image description [*]_.  
+*NiftyPET* is a software platform and a Python namespace package encompassing sub-packages for high-throughput PET image reconstruction, manipulation, processing and analysis with high quantitative accuracy and precision.  See below for the description of the above image reconstructed using *NiftyPET* [*]_.  
 
 *NiftyPET* includes two packages:
 
