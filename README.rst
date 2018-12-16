@@ -17,7 +17,7 @@ NiftyPET: High-throughput image reconstruction and analysis
    :width: 45%
 
 
-.. include:: docs/highlights.rst
+.. include:: ./docs/highlights.rst
 
 **Documentation with installation manual and tutorials**: https://niftypet.readthedocs.io/
 
