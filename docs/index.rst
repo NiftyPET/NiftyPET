@@ -29,6 +29,7 @@ NiftyPET: High-throughput image reconstruction and analysis
 
    tutorials/gpuaccess.rst
    tutorials/basicrecon.rst
+   tutorials/corrqnt.rst
    
 
 
@@ -49,12 +50,3 @@ NiftyPET: High-throughput image reconstruction and analysis
 .. rubric:: Acknowledgements
   
 We gratefully acknowledge the support of NVIDIA Corporation with the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work.
-
-
-
-.. Indices and tables
-.. ------------------
-
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
