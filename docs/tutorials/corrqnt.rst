@@ -38,9 +38,6 @@ The decay correction is applied automatically with the reference to the beginnin
 
 .. code-block:: python
 
-  import numpy as np
-  import sys, os
-
   # NiftyPET image reconstruction package (nipet)
   from niftypet import nipet
   # NiftyPET image manipulation and analysis (nimpa)
