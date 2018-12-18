@@ -44,6 +44,15 @@ This software platform covers the entire processing pipeline, from the raw list-
 
 **Documentation with installation manual and tutorials**: https://niftypet.readthedocs.io/
 
+
+.. rubric:: Acknowledgements
+
+The support of NVIDIA Corporation---the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work---is greatly here appreciated.
+
+.. image:: ./docs/images/Nvidia_logo.png
+   :width: 45%
+   :align: center
+
 Author and developer: Pawel J. Markiewicz @ University College London
 
 Copyright 2018
