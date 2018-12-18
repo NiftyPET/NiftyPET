@@ -49,7 +49,7 @@ NiftyPET: High-throughput image reconstruction and analysis
 
 .. rubric:: Acknowledgements
   
-We gratefully acknowledge the support of NVIDIA Corporation with the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work |pic3|.
+We gratefully acknowledge the support of NVIDIA Corporation with the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work.
 
-.. |pic3| image:: images/Nvidia_logo.png
+.. image:: images/Nvidia_logo.png
    :align: center
