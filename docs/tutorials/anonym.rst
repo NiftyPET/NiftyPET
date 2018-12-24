@@ -10,7 +10,7 @@ The difference between anonymisation and pseudonymisation is that the former doe
 Anonymisation in *NiftyPET*
 ---------------------------
 
-The anonymisation can be achieved using function ``dcmanonym`` in sub-package ``nimpa``.  For example, sensitive information, such as the patient's name, date of birth, etc., can be checked and displayed by:   
+The anonymisation can be achieved using function ``dcmanonym`` in sub-package ``nimpa`` through the use of `Pydicom <https://pydicom.github.io/pydicom/stable/getting_started.html>`_.  For example, sensitive information, such as the patient's name, date of birth, etc., can be checked and displayed by:   
 
 .. code-block:: python
 
