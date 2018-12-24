@@ -17,7 +17,7 @@ NiftyPET: High-throughput image reconstruction and analysis
 
 .. toctree::
    :maxdepth: 2
-   :caption: Documentation:
+   :caption: Documentation
 
    intro
    install
@@ -28,6 +28,7 @@ NiftyPET: High-throughput image reconstruction and analysis
    :caption: Tutorials
 
    tutorials/gpuaccess.rst
+   tutorials/anonym.rst
    tutorials/basicrecon.rst
    tutorials/corrqnt.rst
    
