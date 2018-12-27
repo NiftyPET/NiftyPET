@@ -15,7 +15,9 @@ This documentation intends to present all the processing chains required not onl
 
 
 
-The ``nipet`` (neuro-imaging PET) Python package contains all the routines needed for robust quantitative image reconstruction from raw data with added quality control of any processing segments, e.g., photon scatter or randoms corrections.  The raw data typically includes large list-mode (LM) data (usually taking up GBs), data for detector normalisation, and data for attenuation correction, i.e., the attenuation map, also called the :math:`\mu`-map.
+The ``nipet`` (neuro-imaging PET) Python package contains all the routines needed for robust quantitative image reconstruction from raw data with added quality control of any processing segments, e.g., photon scatter or randoms corrections.  The raw data typically includes large list-mode (LM) data (usually taking up GBs), data for detector normalisation, and data for attenuation correction, i.e., the attenuation map, also called the |mu|-map.
+
+.. :math:`\mu`-map.
 
 The ``nimpa`` (neuro-image manipulation, processing and analysis) package contains all the routines for image input/output, image trimming and up-sampling for regional signal extraction (e.g. from a region of interest--ROI), image registration, and importantly, for partial volume correction (PVC). 
 
@@ -49,7 +51,7 @@ Software infrastructure
 
 For demonstration purposes, all the processing stages presented in the above figure use an amyloid brain scan acquired on the Siemens Biograph mMR. The participant was taking part in “Insight 46”--a neuroscience sub-study of the Medical Research Council National Survey of Health and Development :cite:`Lane2017`. 
 
-The input data include the attenuation coefficient maps (:math:`\mu`-maps) of the hardware and subject (stage **A**), normalisation component data (stage **B**) and the list-mode data (stage **C**).  Optionally, T1 and/or T2 weighted MR images are provided for brain parcellation used in reconstruction and analysis stage **D** and partial volume correction (PVC) stage **F**.  The T1w image is also used for generating an accurate subject's :math:`\mu`-map.  
+The input data include the attenuation coefficient maps (|mu|-maps) of the hardware and subject (stage **A**), normalisation component data (stage **B**) and the list-mode data (stage **C**).  Optionally, T1 and/or T2 weighted MR images are provided for brain parcellation used in reconstruction and analysis stage **D** and partial volume correction (PVC) stage **F**.  The T1w image is also used for generating an accurate subject's |mu|-map.  
 
 In stage **B**  the normalisation component data (relatively small file) is used to generate single factors for each sinogram bin, with the use of bucket singles obtained from list-mode (LM) processing in stage **C**.  The LM processing stage **C** generates prompt and delayeds sinograms and fan sums, which are used for estimating reduced-variance randoms for each sinogram bin.
 
@@ -63,8 +65,8 @@ Great emphasis was put on the quantitative image reconstruction and analysis in 
 
 
 
-
-
 .. rubric:: Footnotes
 .. [*] Currently Python 2.7 is supported, while Python 3 support is intended for the next major release
 .. [*] Currently the GE Signa is not yet fully supported in *NiftyPET*.
+
+.. |mu| unicode:: 0x03BC

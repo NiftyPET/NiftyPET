@@ -1,4 +1,3 @@
-
 ===============================
 Basic PET image reconstruction
 ===============================
@@ -7,7 +6,7 @@ For basic Siemens Biograph mMR image reconstruction, *NiftyPET* requires:
 
   (1) PET list-mode data;
   (2) component-based normalisation file(s);
-  (3) the :math:`\mu`-map image (the linear attenuation map as a 3D image).
+  (3) the |mu|-map image (the linear attenuation map as a 3D image).
 
 An example of downloadable raw PET data of amyloid brain scan is provided in :ref:`data-section` :cite:`Markiewicz2018c`.
 
@@ -66,8 +65,8 @@ The parts of the recognised and categorised input data include:
 Type                  Path
 ==============  ==============
 ``corepath``    the core path of the input folder
-``#mumapDCM``   the number of DICOM files for the :math:`\mu`-map, usually 192
-``mumapDCM``    path to the MR-based DICOM  :math:`\mu`-map
+``#mumapDCM``   the number of DICOM files for the |mu|-map, usually 192
+``mumapDCM``    path to the MR-based DICOM  |mu|-map
 ``lm_bf``       path to the list-mode binary file
 ``lm_dcm``      the path to the DICOM header of the list-mode binary file
 ``nrm_bf``      path to the binary file for component based normalisation
@@ -94,10 +93,10 @@ The path to the output folder where the products of *NiftyPET* go, as well as th
 With the setting as above, the output folder ``output`` will be created within the input data folder.
 
 
-Obtaining the hardware and object :math:`\mu`-maps
+Obtaining the hardware and object |mu|-maps
 --------------------------------------------------
 
-Since MR cannot image the scanner hardware, i.e., the patient table, head and neck coils, etc., the high resolution CT-based mu-maps are provided by the scanner manufacturer.  These then have to be appropriately resampled to the table and coils position as used in any given imaging setting.  The hardware and object :math:`\mu`-maps are obtained as follow:
+Since MR cannot image the scanner hardware, i.e., the patient table, head and neck coils, etc., the high resolution CT-based mu-maps are provided by the scanner manufacturer.  These then have to be appropriately resampled to the table and coils position as used in any given imaging setting.  The hardware and object |mu|-maps are obtained as follow:
 
 .. code-block:: python
 
@@ -108,7 +107,7 @@ Since MR cannot image the scanner hardware, i.e., the patient table, head and ne
   muodct = nipet.obj_mumap(datain, mMRparams, outpath=opth, store=True)
 
 
-The argument [1,2,4] for Obtaining the hardware :math:`\mu`-map correspond to the hardware bits used in imaging, i.e.:
+The argument [1,2,4] for Obtaining the hardware |mu|-map correspond to the hardware bits used in imaging, i.e.:
 
   (1) Head and neck lower coil
   (2) Head and neck upper coil
@@ -118,12 +117,12 @@ The argument [1,2,4] for Obtaining the hardware :math:`\mu`-map correspond to th
 Currently, the different parts have to be entered manually (they are not automatically recognised which are in use).
 
 
-The option ``use_stored=True`` allows to reuse the already created hardware :math:`\mu`-map, without recalculating it (the resampling can take more than a minute).
+The option ``use_stored=True`` allows to reuse the already created hardware |mu|-map, without recalculating it (the resampling can take more than a minute).
 
 Both output dictionaries ``muhdct`` and ``muodct`` will contain images among other parameters, such as the image affine matrix and image file paths.
 
 
-In order to check if both :math:`\mu`-maps were properly loaded, the maps can be plotted together transaxially by choosing the axial index ``iz`` along the :math:`z`-axis, as follows:
+In order to check if both |mu|-maps were properly loaded, the maps can be plotted together transaxially by choosing the axial index ``iz`` along the :math:`z`-axis, as follows:
 
 .. code-block:: python
 
@@ -140,7 +139,7 @@ This will produce the following image:
    :scale: 90 %
    :alt: transaxial composite of the mu-map
 
-   Composite of the hardware and object :math:`\mu`-maps.  Observed can be the human head between the upper and lower head&neck coils, and the patient table below.
+   Composite of the hardware and object |mu|-maps.  Observed can be the human head between the upper and lower head&neck coils, and the patient table below.
 
 
 The sagittal image can be generated in a similar way, but choosing the slice along the :math:`x`-axis, i.e.:
@@ -159,7 +158,7 @@ The sagittal image can be generated in a similar way, but choosing the slice alo
    :scale: 50 %
    :alt: sagittal composite of the mu-map
 
-   Sagittal view of the composite of the hardware and object :math:`\mu`-maps.  Observed can be the human head between the upper and lower head&neck coils, and the patient table on the right of the head.
+   Sagittal view of the composite of the hardware and object |mu|-maps.  Observed can be the human head between the upper and lower head&neck coils, and the patient table on the right of the head.
 
 
 
@@ -244,8 +243,10 @@ In order to get general idea about the potential motion during the acquisition, 
   The centre of mass of the radiodistribution for the 60-minute amyloid PET acquisition.  Very little motion is observer--the smooth, exponentially varying curve is due to the tracer kinetics.
 
 
-Image reconstruction
---------------------
+.. _statrec-subsection:
+
+Static image reconstruction
+---------------------------
 
 The code below provides full image reconstruction for the last 10 minutes of the acquisition to get an estimate of the amyloid load through the ratio image (SUVr).
 
@@ -253,7 +254,7 @@ The code below provides full image reconstruction for the last 10 minutes of the
 
   recon = nipet.mmrchain( 
       datain, mMRparams,
-      frames = ['fluid', [3000, 3600]],
+      frames = ['timings', [3000, 3600]],
       mu_h = muhdct, 
       mu_o = muodct,
       itr=4,
@@ -269,11 +270,11 @@ The input arguments are as follows:
 ==============  ============
 argument        description
 ==============  ============
-``datain``      input data (list-mode, normalisation and the :math:`\mu`-map) 
+``datain``      input data (list-mode, normalisation and the |mu|-map) 
 ``mMRparams``   scanner parameters (scanner constants and LUTs)
 ``frames``      definitions of time frame(s);
-``mu_h``        hardware :math:`\mu`-map
-``mu_o``        object :math:`\mu`-map
+``mu_h``        hardware |mu|-map
+``mu_o``        object |mu|-map
 ``itr``         number of iterations of OSEM (14 subsets).
 ``fwhm``        full width at half-maximum for the image post-smoothing
 ``outpath``     path to the output folder
@@ -281,7 +282,7 @@ argument        description
 ``store_img``   store images (yes/no)
 ==============  ============
 
-- ``fluid`` indicates that the the start/stop is user-specified at any location.
+- the argument ``timings`` indicates that the start/stop times in the following sublist is user-specified and can be done for multiple time frames (see section :ref:`dynfrms-subsection`).
 
 
 The reconstructed image can be viewed as follow:
@@ -297,3 +298,6 @@ The reconstructed image can be viewed as follow:
   :alt: centre of mass
 
   The transaxial slice of the amyloid PET reconstructed image.  Voxel intensities are in Bq.
+
+
+.. |mu| unicode:: 0x03BC
