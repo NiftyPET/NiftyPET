@@ -153,6 +153,7 @@ The dynamic reconstruction can be invoked after the following setting-up and pre
 
    .. code-block:: python
 
+      import os
       from niftypet import nipet
       from niftypet import nimpa
 
@@ -202,7 +203,7 @@ Since multiple image frames are reconstructed, the ``mmrchain`` function apart f
                store_img_intrmd = True)
 
 
-The reconstructed 4-D image can be accessed through the output dictionary, ``recon``:
+The path to the reconstructed 4-D image can be accessed through the output dictionary, ``recon``:
 
    .. code-block:: python
 
