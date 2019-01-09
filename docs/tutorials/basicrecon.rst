@@ -27,7 +27,7 @@ Prior to dealing with the raw input data, required packages need to be imported 
   from niftypet import nimpa
 
   # get all the scanner parameters
-  mMRparams = nipet.get_mmrparams()
+  mMRpars = nipet.get_mmrparams()
 
 
 
@@ -43,7 +43,7 @@ All the part of the input data is aimed to be automatically recognised and sorte
   folderin = '/path/to/input/data/folder/'
 
   # automatically categorise the input data
-  datain = nipet.classify_input(folderin, mMRparams)
+  datain = nipet.classify_input(folderin, mMRpars)
 
 
 The output of datain for the above PET data should be as follows::
@@ -87,7 +87,7 @@ The path to the output folder where the products of *NiftyPET* go, as well as th
   opth = os.path.join( datain['corepath'], 'output')
 
   # switch on verbose mode
-  mMRparams['Cnt']['VERBOSE'] = True
+  mMRpars['Cnt']['VERBOSE'] = True
 
 
 With the setting as above, the output folder ``output`` will be created within the input data folder.
@@ -101,10 +101,10 @@ Since MR cannot image the scanner hardware, i.e., the patient table, head and ne
 .. code-block:: python
 
   # obtain the hardware mu-map (the bed and the head&neck coil)
-  muhdct = nipet.hdw_mumap(datain, [1,2,4], mMRparams, outpath=opth, use_stored=True)
+  muhdct = nipet.hdw_mumap(datain, [1,2,4], mMRpars, outpath=opth, use_stored=True)
 
   # obtain the MR-based human mu-map
-  muodct = nipet.obj_mumap(datain, mMRparams, outpath=opth, store=True)
+  muodct = nipet.obj_mumap(datain, mMRpars, outpath=opth, store=True)
 
 
 The argument [1,2,4] for Obtaining the hardware |mu|-map correspond to the hardware bits used in imaging, i.e.:
@@ -169,7 +169,7 @@ The large list-mode is processed to obtain histogrammed data (sinograms) as well
 
 .. code-block:: python
   
-  hst = nipet.mmrhist(datain, mMRparams)
+  hst = nipet.mmrhist(datain, mMRpars)
 
 
 
@@ -253,7 +253,7 @@ The code below provides full image reconstruction for the last 10 minutes of the
 .. code-block:: python
 
   recon = nipet.mmrchain( 
-      datain, mMRparams,
+      datain, mMRpars,
       frames = ['timings', [3000, 3600]],
       mu_h = muhdct, 
       mu_o = muodct,
@@ -271,7 +271,7 @@ The input arguments are as follows:
 argument        description
 ==============  ============
 ``datain``      input data (list-mode, normalisation and the |mu|-map) 
-``mMRparams``   scanner parameters (scanner constants and LUTs)
+``mMRpars``     scanner parameters (scanner constants and LUTs)
 ``frames``      definitions of time frame(s);
 ``mu_h``        hardware |mu|-map
 ``mu_o``        object |mu|-map
