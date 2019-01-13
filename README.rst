@@ -53,7 +53,7 @@ This software platform covers the entire processing pipeline, from the raw list-
 
 We gratefully acknowledge the support of `NVIDIA Corporation <https://www.nvidia.com>`_  with the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work.
 
-.. image:: ./docs/images/Nvidia_logo.png
+.. image:: ./docs/logos/Nvidia_logo.png
    :width: 25%
    :align: center
 
