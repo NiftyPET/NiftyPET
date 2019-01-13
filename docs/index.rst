@@ -32,9 +32,8 @@ NiftyPET: High-throughput image reconstruction and analysis
    tutorials/basicrecon.rst
    tutorials/dynrecon.rst
    tutorials/corrqnt.rst
+
    
-
-
 .. toctree::
    :maxdepth: 2
    :caption: Open-source Data
@@ -49,9 +48,8 @@ NiftyPET: High-throughput image reconstruction and analysis
    zbibref
 
 
-.. rubric:: Acknowledgements
-  
-We gratefully acknowledge the support of NVIDIA Corporation with the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work.
+.. toctree::
+   :maxdepth: 2
+   :caption: Acknowledgements
 
-.. image:: images/Nvidia_logo.png
-   :align: center
+   ackn

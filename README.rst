@@ -45,7 +45,13 @@ This software platform covers the entire processing pipeline, from the raw list-
 **Documentation with installation manual and tutorials**: https://niftypet.readthedocs.io/
 
 
-**Acknowledgements**:  The support of NVIDIA Corporation, by donating the Tesla K20 and Titan X Pascal GPUs used for this research and work, is greatly here appreciated.
+**Acknowledgements**:  This project is being developed at University College London (`UCL <https://www.ucl.ac.uk/>`_). Initially, it was supported and funded by the Engineering and Physical Sciences Research Council (`EPSRC <https://epsrc.ukri.org/>`_) of the United Kingdom (UK).  Currently, the project is being further developed under the following funding streams:
+
+1. The `Innovative Medicines Initiative 2 <https://www.imi.europa.eu/about-imi>`_ Joint Undertaking under grant agreement No 115952. This Joint Undertaking receives support from the European Union’s `Horizon 2020 <https://ec.europa.eu/programmes/horizon2020/en/>`_ research and innovation programme and `EFPIA <https://www.efpia.eu/>`_.
+
+2. The `Dementias Platform UK <https://www.dementiasplatform.uk/>`_ `MR-PET Partnership <https://gtr.ukri.org/projects?ref=MR%2FN025792%2F1>`_, supported by the Medical Research Council (`MRC <https://mrc.ukri.org/>`_) in the UK.
+
+We gratefully acknowledge the support of `NVIDIA Corporation <https://www.nvidia.com>`_  with the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work.
 
 .. image:: ./docs/images/Nvidia_logo.png
    :width: 25%
