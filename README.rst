@@ -70,8 +70,7 @@ We gratefully acknowledge the support of `NVIDIA Corporation <https://www.nvidia
 |logo1| |logo2| |logo3|
 
 .. |logo1| image:: ./docs/logos/MRCLogo.png
-   :width: 144pt
-   :height: 64pt
+   :scale: 50%
    :target: https://mrc.ukri.org/
 
 .. |logo2| image:: ./docs/logos/epsrc-highres.jpg
