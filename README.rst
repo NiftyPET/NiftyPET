@@ -6,11 +6,13 @@ NiftyPET: High-throughput image reconstruction and analysis
   :target: https://niftypet.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
 
-**Documentation**: https://niftypet.readthedocs.io/
-
 
 .. image:: ./docs/logos/ucl.png
    :target: https://www.ucl.ac.uk/
+
+
+**Documentation**: https://niftypet.readthedocs.io/
+
 
 |pic1| |pic2|
 
