@@ -64,10 +64,8 @@ We gratefully acknowledge the support of `NVIDIA Corporation <https://www.nvidia
 +---------+-----------+---------+
 | |logo4| +  |logo5|  + |logo6| |
 +---------+-----------+---------+
-| |logo1| +  |logo2|  + |logo3| |
-+---------+-----------+---------+
 
-|logo1| |logo2| |logo3|
+|logo3|
 
 .. |logo1| image:: ./docs/logos/MRCLogo.png
    :scale: 50%
