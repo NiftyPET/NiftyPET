@@ -97,15 +97,15 @@ We gratefully acknowledge the support of `NVIDIA Corporation <https://www.nvidia
 
 .. |logo7| image:: ./docs/logos/AMYPAD_Logo.jpg
    :align: middle
-   :width: 137pt
-   :height: 72pt
+   :width: 121pt
+   :height: 64pt
    :target: https://amypad.eu/
 
 
 .. |logo8| image:: ./docs/logos/DPUK_logo.jpg
    :align: middle
-   :width: 234pt
-   :height: 72pt
+   :width: 208pt
+   :height: 64pt
    :target: https://www.dementiasplatform.uk/
 
 
