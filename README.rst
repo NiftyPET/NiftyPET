@@ -57,6 +57,62 @@ We gratefully acknowledge the support of `NVIDIA Corporation <https://www.nvidia
    :width: 25%
    :align: center
 
++---------+---------------------+
+| |logo7| | |logo8|             |
++---------+-----------+---------+
+| |logo4| +  |logo5|  + |logo6| |
++---------+-----------+---------+
+| |logo1| +  |logo2|  + |logo3| |
++---------+-----------+---------+
+
+.. |logo1| image:: ./docs/logos/MRCLogo.png
+   :width: 144pt
+   :height: 64pt
+   :target: https://mrc.ukri.org/
+
+.. |logo2| image:: ./docs/logos/epsrc-highres.jpg
+   :width: 154pt
+   :height: 64pt
+   :target: https://epsrc.ukri.org/
+
+.. |logo3| image:: ./docs/logos/Nvidia_logo.png
+   :align: middle
+   :width: 88pt
+   :height: 64pt
+   :target: https://www.nvidia.com/en-us/research/
+
+.. |logo4| image:: ./docs/logos/EFPIA-logo.jpg
+   :align: middle
+   :width: 111pt
+   :height: 64pt
+   :target: https://www.efpia.eu/
+
+.. |logo5| image:: ./docs/logos/IMI-logo.jpg
+   :align: middle
+   :width: 208pt
+   :height: 64pt
+   :target: https://www.imi.europa.eu/
+
+.. |logo6| image:: ./docs/logos/EU-logo.png
+   :align: middle
+   :width: 94pt
+   :height: 64pt
+   :target: https://europa.eu/european-union/index_en
+
+.. |logo7| image:: ./docs/logos/AMYPAD_Logo.jpg
+   :align: middle
+   :width: 137pt
+   :height: 72pt
+   :target: https://amypad.eu/
+
+
+.. |logo8| image:: ./docs/logos/DPUK_logo.jpg
+   :align: middle
+   :width: 234pt
+   :height: 72pt
+   :target: https://www.dementiasplatform.uk/
+
+
 Author and developer: Pawel J. Markiewicz @ University College London
 
 Copyright 2018
