@@ -5,7 +5,10 @@ NiftyPET: High-throughput image reconstruction and analysis
 .. image:: https://readthedocs.org/projects/niftypet/badge/?version=latest
   :target: https://niftypet.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
-  
+
+.. image:: .docs/logos/ucl.png
+   :target: https://www.ucl.ac.uk/
+
 **Documentation**: https://niftypet.readthedocs.io/
 
 |pic1| |pic2|
@@ -53,13 +56,15 @@ This software platform covers the entire processing pipeline, from the raw list-
 
 We gratefully acknowledge the support of `NVIDIA Corporation <https://www.nvidia.com>`_  with the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work.
 
-+---------+-----------+---------+
-| |logo7| | |logo8|   |         |
++---------+---------------------+
+| |logo7| | |logo8|             |
 +---------+-----------+---------+
 | |logo4| +  |logo5|  + |logo6| |
 +---------+-----------+---------+
 | |logo1| +  |logo2|  + |logo3| |
 +---------+-----------+---------+
+
+|logo1| |logo2| |logo3|
 
 .. |logo1| image:: ./docs/logos/MRCLogo.png
    :width: 144pt
