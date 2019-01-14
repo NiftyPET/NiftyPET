@@ -9,7 +9,7 @@ NiftyPET: High-throughput image reconstruction and analysis
 **Documentation**: https://niftypet.readthedocs.io/
 
 
-.. image:: .docs/logos/ucl.png
+.. image:: ./docs/logos/ucl.png
    :target: https://www.ucl.ac.uk/
 
 |pic1| |pic2|
