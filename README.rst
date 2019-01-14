@@ -51,7 +51,11 @@ This software platform covers the entire processing pipeline, from the raw list-
 **Documentation with installation manual and tutorials**: https://niftypet.readthedocs.io/
 
 
-**Acknowledgements**:  This project is being developed at University College London (`UCL <https://www.ucl.ac.uk/>`_). Initially, it was supported and funded by the Engineering and Physical Sciences Research Council (`EPSRC <https://epsrc.ukri.org/>`_) of the United Kingdom (UK).  Currently, the project is being further developed under the following funding streams:
+================
+Acknowledgements
+================
+
+This project is being developed at University College London (`UCL <https://www.ucl.ac.uk/>`_). Initially, it was supported and funded by the Engineering and Physical Sciences Research Council (`EPSRC <https://epsrc.ukri.org/>`_) of the United Kingdom (UK).  Currently, the project is being further developed under the following funding streams:
 
 1. The `Innovative Medicines Initiative 2 <https://www.imi.europa.eu/about-imi>`_ Joint Undertaking under grant agreement No 115952. This Joint Undertaking receives support from the European Union’s `Horizon 2020 <https://ec.europa.eu/programmes/horizon2020/en/>`_ research and innovation programme and `EFPIA <https://www.efpia.eu/>`_.
 
@@ -69,50 +73,22 @@ We gratefully acknowledge the support of `NVIDIA Corporation <https://www.nvidia
 
 |logo3|
 
-.. |logo1| image:: ./docs/logos/MRCLogo.png
-   :scale: 50%
-   :target: https://mrc.ukri.org/
-
-.. |logo2| image:: ./docs/logos/epsrc-highres.jpg
-   :width: 154pt
-   :height: 64pt
-   :target: https://epsrc.ukri.org/
-
 .. |logo3| image:: ./docs/logos/Nvidia_logo.png
-   :align: middle
-   :width: 88pt
-   :height: 64pt
    :target: https://www.nvidia.com/en-us/research/
 
-.. |logo4| image:: ./docs/logos/EFPIA-logo.jpg
-   :align: middle
-   :width: 111pt
-   :height: 64pt
+.. |logo4| image:: ./docs/logos/efpia.jpg
    :target: https://www.efpia.eu/
 
-.. |logo5| image:: ./docs/logos/IMI-logo.jpg
-   :align: middle
-   :width: 208pt
-   :height: 64pt
+.. |logo5| image:: ./docs/logos/imi.jpg
    :target: https://www.imi.europa.eu/
 
-.. |logo6| image:: ./docs/logos/EU-logo.png
-   :align: middle
-   :width: 94pt
-   :height: 64pt
+.. |logo6| image:: ./docs/logos/eu.png
    :target: https://europa.eu/european-union/index_en
 
-.. |logo7| image:: ./docs/logos/AMYPAD_Logo.jpg
-   :align: middle
-   :width: 121pt
-   :height: 64pt
+.. |logo7| image:: ./docs/logos/amypad.jpg
    :target: https://amypad.eu/
 
-
-.. |logo8| image:: ./docs/logos/DPUK_logo.jpg
-   :align: middle
-   :width: 208pt
-   :height: 64pt
+.. |logo8| image:: ./docs/logos/dpuk.jpg
    :target: https://www.dementiasplatform.uk/
 
 
