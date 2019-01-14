@@ -63,15 +63,15 @@ This project is being developed at University College London (`UCL <https://www.
 
 We gratefully acknowledge the support of `NVIDIA Corporation <https://www.nvidia.com>`_  with the donation of the Tesla K20 and Titan X Pascal GPUs used for this research and work.
 
-+---------+-----------+
-| |logo7| | |logo8|   |
-+---------+-----------+
++---------+---------+---------+
+| |logo7| | |logo8| | |logo3| |
++---------+---------+---------+
 
 +---------+-----------+---------+
 | |logo4| +  |logo5|  + |logo6| |
 +---------+-----------+---------+
 
-|logo3|
+
 
 .. |logo3| image:: ./docs/logos/Nvidia_logo.png
    :target: https://www.nvidia.com/en-us/research/
