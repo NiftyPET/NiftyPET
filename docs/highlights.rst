@@ -1,7 +1,7 @@
 
 .. :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-*NiftyPET* is a software platform and a Python namespace package encompassing sub-packages for high-throughput PET image reconstruction, manipulation, processing and analysis with high quantitative accuracy and precision.  See below for the description of the above image, reconstructed using *NiftyPET* [*]_.  
+*NiftyPET* is a software platform and a Python namespace package encompassing sub-packages for high-throughput PET image reconstruction, manipulation, processing and analysis with high quantitative accuracy and precision.  One of its key applications is **brain imaging in dementia** with the use of amyloid tracers.  See below for the description of the above amyloid PET image reconstructed using *NiftyPET*, superimposed on the MR T1 weighted image [*]_.  
 
 *NiftyPET* includes two packages:
 
