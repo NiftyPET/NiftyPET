@@ -55,7 +55,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'NiftyPET'
-copyright = u'2018, Pawel J Markiewicz'
+copyright = u'2018-2019, Pawel J Markiewicz'
 author = u'Pawel J Markiewicz'
 
 # The version info for the project you're documenting, acts as replacement for
