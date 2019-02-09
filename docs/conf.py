@@ -33,11 +33,11 @@
 extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.doctest',
     'sphinx.ext.coverage',
-    #'sphinx.ext.mathjax',
+    'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinxcontrib.bibtex',
-    'sphinx.ext.imgmath',
+    #'sphinx.ext.imgmath',
     #'sphinxarg.ext'
     ]
 
@@ -84,6 +84,8 @@ pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = False
+
+numfig = True
 
 
 # -- Options for HTML output ----------------------------------------------
