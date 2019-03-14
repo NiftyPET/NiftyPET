@@ -52,7 +52,8 @@ Hardware
    * NVIDIA Tesla K20/40,
    * NVIDIA Titan Xp,
    * NVIDIA GeForce GTX 1060,
-   * NVIDIA GeForce GTX 1080 /Ti.
+   * NVIDIA GeForce GTX 1080 /Ti,
+   * NVIDIA  Tesla V100.
    
 * **CPU host**: The GPU device can be accessed by a CPU host, with a reasonable computing power for some other image processing routines (e.g., image registration, etc.).  It is recommended to have at least 16 GB of RAM, although we have managed to run dynamic reconstruction using old PC workstations with as little as 11 GB of RAM.
 
