@@ -145,6 +145,8 @@ Please note, that internally, consecutive dynamic frames are represented as an a
 
 
 
+
+
 Dynamic reconstruction
 ----------------------
 
@@ -216,3 +218,77 @@ or the stored 4-D NIfTI image in:
 
       In [19]: recon['fpet']
       Out[19]: '/path/to/NIfTI-output'
+
+
+
+Time offset due to injection delay
+----------------------------------
+
+In most cases the injection is performed with some delay relative to the time of starting the scan.  Also, the first recorded counts will be random events, as the activity is detected from outside the field of view (FOV). The offset caused by the injection delay and random events, can be separated and omitted by running first list mode processing with histogramming, followed by estimating the time offset and accounting for it in the timings of the frames:
+
+   .. code-block:: python
+
+      # histogram the list mode data (in datain dictionary) using scanner parameters (MMRpars)
+      hst = nipet.mmrhist(datain, mMRpars)
+
+      # offset for the time from which meaningful events are detected
+      toff = nipet.lm.get_time_offset(hst)
+
+      # dynamic frame timings
+      frm_timings = nipet.lm.dynamic_timings(frmdef, offset=toff)
+
+The reconstruction is then performed with the augmented timings in the following way:
+
+   .. code-block:: python
+
+      recon = nipet.mmrchain( 
+               datain,
+               mMRpars,
+               frames = frm_timings,
+               mu_h = muhdct, 
+               mu_o = muodct,
+               itr = 4,
+               fwhm = 0.,
+               outpath = opth,
+               fcomment = '_dyn',
+               store_img = True,
+               store_img_intrmd = True)
+
+Note, that the reconstruction pipeline accepts different definitions of the dynamic frames as shown above.
+
+
+Visualisation of dynamic frame timings
+--------------------------------------
+
+The time frames can be visualised with one line of code:
+
+   .. code-block:: python
+
+      # draw the frame timings over the head-curve
+      nipet.lm.draw_frames(hst, frm_timings)
+
+which plots the timings of dynamic frames over the prompts, delayeds and the difference between the two as shown below in :numref:`fig-toff`.
+
+.. _fig-toff:
+.. figure:: images/hc_dynamic_frames_full.png
+   :scale: 95 %
+   :alt: drawing dynamic frames superimposed on head curve
+
+   The dynamic frame intervals are marked with dashed horizontal black curves on top of the head-curve (prompts and delayeds per second).
+
+
+In order to zoom in to a particular time interval, e.g., from 0s to 150s, and visualise clearly the time offset, the following line of code can be used:
+
+   .. code-block:: python
+
+      # draw the frame timings over the head-curve, with time limits of tlim
+      nipet.lm.draw_frames(hst, frm_timings, tlim = [0, 150])
+
+resulting in the following plot (:numref:`_fig-toff-zoom`):
+
+.. _fig-toff-zoom:
+.. figure:: images/hc_dynamic_frames_0-150s.png
+   :scale: 95 %
+   :alt: drawing dynamic frames superimposed on part of the head curve
+
+   The dynamic frame intervals are marked with dashed horizontal black curves on top of the part of head-curve (prompts and delayeds per second).  Note that almost 30s of list mode data from the beginning is discarded.
