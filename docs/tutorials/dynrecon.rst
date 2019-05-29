@@ -228,7 +228,7 @@ In most cases the injection is performed with some delay relative to the time of
 
    .. code-block:: python
 
-      # histogram the list mode data (in datain dictionary) using scanner parameters (MMRpars)
+      # histogram the list mode data (in <datain> dictionary) using scanner parameters (<mMRpars>)
       hst = nipet.mmrhist(datain, mMRpars)
 
       # offset for the time from which meaningful events are detected
@@ -284,7 +284,7 @@ In order to zoom in to a particular time interval, e.g., from 0s to 150s, and vi
       # draw the frame timings over the head-curve, with time limits of tlim
       nipet.lm.draw_frames(hst, frm_timings, tlim = [0, 150])
 
-resulting in the following plot (:numref:`_fig-toff-zoom`):
+resulting in the following plot (:numref:`fig-toff-zoom`):
 
 .. _fig-toff-zoom:
 .. figure:: images/hc_dynamic_frames_0-150s.png
