@@ -14,7 +14,7 @@ Dynamic time frame definitions
 
 The extra parameters include the definition of the dynamic time frames.  For example, for identical acquisitions, as the provided amyloid PET data (see :ref:`data-section`), the one-hour dynamic PET data was divided into 31 dynamic frames in :cite:`Scott2018`, i.e.: 4 |times| 15s, 8 |times| 30s, 9 |times| 60s, 2 |times| 180s, 8 |times| 300s, which makes the total of 3600s (one hour).
 
-.. |times| unicode:: 0x0D7 .. unicode for \times  
+.. |times| unicode:: 0x0D7 .. unicode for \times
 
 These definitions can then be represented using Python lists in three ways:
 
@@ -22,9 +22,9 @@ These definitions can then be represented using Python lists in three ways:
 
       .. code-block:: python
 
-         frmdef_1D = [ 
+         frmdef_1D = [
             15,  15,  15,  15,
-            30,  30,  30,  30, 
+            30,  30,  30,  30,
             30,  30,  30,  30,
             60,  60,  60,
             60,  60,  60,
@@ -103,7 +103,7 @@ resulting in:
    .. code-block:: python
 
       In [1]: frmdct
-      Out[1]: 
+      Out[1]:
       {'frames': array([ 15,  15,  15,  15,  30,  30,  30,  30,  30,  30,  30,  30,  60,
                60,  60,  60,  60,  60,  60,  60,  60, 180, 180, 300, 300, 300,
               300, 300, 300, 300, 300], dtype=uint16),
@@ -156,9 +156,11 @@ The dynamic reconstruction can be invoked after the following setting-up and pre
    .. code-block:: python
 
       import os
+      import logging
       from niftypet import nipet
       from niftypet import nimpa
 
+      logging.basicConfig(level=logging.INFO)
       # dynamic frames for kinetic analysis
       frmdef = ['def', [4, 15], [8, 30], [9, 60], [2, 180], [8, 300]]
 
@@ -174,7 +176,7 @@ The dynamic reconstruction can be invoked after the following setting-up and pre
       #------------------------------------------------------
 
       # switch on verbose mode
-      mMRpars['Cnt']['VERBOSE']=True
+      logging.getLogger().setLevel(logging.DEBUG)
 
       # output path
       opth = os.path.join( datain['corepath'], 'output')
@@ -191,11 +193,11 @@ Since multiple image frames are reconstructed, the ``mmrchain`` function apart f
 
    .. code-block:: python
 
-      recon = nipet.mmrchain( 
+      recon = nipet.mmrchain(
                datain,
                mMRpars,
                frames = frmdef,
-               mu_h = muhdct, 
+               mu_h = muhdct,
                mu_o = muodct,
                itr = 4,
                fwhm = 0.,
@@ -241,11 +243,11 @@ The reconstruction is then performed with the augmented timings in the following
 
    .. code-block:: python
 
-      recon = nipet.mmrchain( 
+      recon = nipet.mmrchain(
                datain,
                mMRpars,
                frames = frm_timings,
-               mu_h = muhdct, 
+               mu_h = muhdct,
                mu_o = muodct,
                itr = 4,
                fwhm = 0.,

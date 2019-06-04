@@ -19,13 +19,14 @@ Prior to dealing with the raw input data, required packages need to be imported 
 .. code-block:: python
 
   import numpy as np
-  import sys, os
+  import sys, os, logging
 
   # NiftyPET image reconstruction package (nipet)
   from niftypet import nipet
   # NiftyPET image manipulation and analysis (nimpa)
   from niftypet import nimpa
 
+  logging.basicConfig(level=logging.INFO)
   # get all the scanner parameters
   mMRpars = nipet.get_mmrparams()
 
@@ -38,7 +39,7 @@ Sorting and classification of input data
 All the part of the input data is aimed to be automatically recognised and sorted in Python dictionary.  This can be obtained by providing a path to the folder containing the unzipped file of the freely provided raw PET data in :ref:`data-section`.  The data is then automatically explored and sorted in the output dictionary ``datain``:
 
 .. code-block:: python
-  
+
   # Enter the path to the input data folder
   folderin = '/path/to/input/data/folder/'
 
@@ -49,7 +50,7 @@ All the part of the input data is aimed to be automatically recognised and sorte
 The output of datain for the above PET data should be as follows::
 
   In [5]: datain
-  Out[5]: 
+  Out[5]:
   {'#mumapDCM': 192,
    'corepath': '/data/amyloid_brain',
    'lm_bf': '/data/amyloid_brain/LM/17598013_1946_20150604155500.000000.bf',
@@ -79,15 +80,15 @@ Type                  Path
 Specifying output folder
 ------------------------
 
-The path to the output folder where the products of *NiftyPET* go, as well as the ``verbose`` mode can be specified as follows: 
+The path to the output folder where the products of *NiftyPET* go, as well as the ``verbose`` mode can be specified as follows:
 
 .. code-block:: python
-  
+
   # output path
   opth = os.path.join( datain['corepath'], 'output')
 
   # switch on verbose mode
-  mMRpars['Cnt']['VERBOSE'] = True
+  logging.getLogger().setLevel(logging.DEBUG)
 
 
 With the setting as above, the output folder ``output`` will be created within the input data folder.
@@ -168,7 +169,7 @@ List-mode processing with histogramming
 The large list-mode is processed to obtain histogrammed data (sinograms) as well as other statistics on the acquisition, including the head curves and motion detection:
 
 .. code-block:: python
-  
+
   hst = nipet.mmrhist(datain, mMRpars)
 
 
@@ -176,7 +177,7 @@ The large list-mode is processed to obtain histogrammed data (sinograms) as well
 The direct prompt and delayed sinograms can be viewed by choosing the sinogram index below 127 and from 127 up to 836 for oblique sinograms, i.e.:
 
 .. code-block:: python
-  
+
   # sinogram index (<127 for direct sinograms, >=127 for oblique sinograms)
   si = 60
 
@@ -229,7 +230,7 @@ The head-curve, which is the total number of counts detected per second across t
 In order to get general idea about the potential motion during the acquisition, the centre of mass of the radiodistribution along the axial direction can be plotted as follows:
 
 .. code-block:: python
-  
+
   plot(hst['cmass'])
   grid('on')
   xlabel('time')
@@ -252,10 +253,10 @@ The code below provides full image reconstruction for the last 10 minutes of the
 
 .. code-block:: python
 
-  recon = nipet.mmrchain( 
+  recon = nipet.mmrchain(
       datain, mMRpars,
       frames = ['timings', [3000, 3600]],
-      mu_h = muhdct, 
+      mu_h = muhdct,
       mu_o = muodct,
       itr=4,
       fwhm=0.0,
@@ -270,7 +271,7 @@ The input arguments are as follows:
 ==============  ============
 argument        description
 ==============  ============
-``datain``      input data (list-mode, normalisation and the |mu|-map) 
+``datain``      input data (list-mode, normalisation and the |mu|-map)
 ``mMRpars``     scanner parameters (scanner constants and LUTs)
 ``frames``      definitions of time frame(s);
 ``mu_h``        hardware |mu|-map
