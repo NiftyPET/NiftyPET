@@ -14,6 +14,10 @@ The core routines are written in CUDA C and embedded in Python C extensions to e
 
 * *Rapid processing of PET list-mode data for efficient uncertainty estimation and data analysis* Physics in Medicine & Biology (2016). https://doi.org/10.1088/0031-9155/61/13/N322
 
+An example application of *NiftyPET* in the development of novel image reconstruction:
+
+* *Faster PET Reconstruction with Non-Smooth Priors by Randomization and Preconditioning* Physics in Medicine & Biology (2019). https://doi.org/10.1088/1361-6560/ab3d07
+
 Although, *NiftyPET* is dedicated to high-throughput image reconstruction and analysis of brain images, it can equally well be used for **whole body imaging**.  Strong emphasis is put on the data, which are acquired using positron emission tomography (PET) and magnetic resonance (MR), especially using the hybrid and simultaneous PET/MR scanners.  
 
 This software platform covers the entire processing pipeline, from the raw list-mode (LM) PET data through to the final image statistic of interest (e.g., regional SUV), including LM bootstrapping and multiple independent reconstructions to facilitate voxel-wise estimation of uncertainties.
