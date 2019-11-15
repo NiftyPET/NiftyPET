@@ -29,8 +29,8 @@ NiftyPET: High-throughput image reconstruction and analysis
 
 *NiftyPET* includes two packages:
 
-  * ``nimpa``:  https://github.com/pjmark/NIMPA (neuro-image manipulation, processing and analysis)
-  * ``nipet``:  https://github.com/pjmark/NIPET (quantitative PET neuro-image reconstruction)
+  * ``nimpa``:  https://github.com/NiftyPET/NIMPA (neuro-image manipulation, processing and analysis)
+  * ``nipet``:  https://github.com/NiftyPET/NIPET (quantitative PET neuro-image reconstruction)
 
 The core routines are written in CUDA C and embedded in Python C extensions.  The scientific aspects of this software platform are covered in two open-access publications:
 

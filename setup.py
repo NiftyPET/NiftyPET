@@ -22,7 +22,7 @@ setup(
     description='CUDA-accelerated Python utilities for high-throughput PET/MR image reconstruction and analysis',
     #long_description=README_rst,
     long_description="""Currently a placeholder package which doesn't work (for now).
-See https://github.com/pjmark/NiftyPET instead.""",
+See https://github.com/NiftyPET/NiftyPET instead.""",
     license='Apache 2.0',
     url='https://niftypet.readthedocs.io',
     maintainer='Casper da Costa-Luis',

@@ -5,8 +5,8 @@
 
 *NiftyPET* includes two packages:
 
-  * ``nimpa``:  https://github.com/pjmark/NIMPA (neuro-image manipulation, processing and analysis)
-  * ``nipet``:  https://github.com/pjmark/NIPET (quantitative PET neuroimaging)
+  * ``nimpa``:  https://github.com/NiftyPET/NIMPA (neuro-image manipulation, processing and analysis)
+  * ``nipet``:  https://github.com/NiftyPET/NIPET (quantitative PET neuroimaging)
 
 The core routines are written in CUDA C and embedded in Python C extensions to enable user-friendly and high-throughput executions on NVIDIA graphics processing units (GPU).  The scientific aspects of this software platform are covered in two open-access publications:
 
