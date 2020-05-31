@@ -66,7 +66,7 @@ Great emphasis was put on the quantitative image reconstruction and analysis in 
 
 
 .. rubric:: Footnotes
-.. [*] Currently Python 2.7 is supported, while Python 3 support is intended for the next major release
+.. [*] Currently Python 2.7 is supported in version 1.0, while Python 3 support is added in version 2.0+ of NiftyPET
 .. [*] Currently the GE Signa is not yet fully supported in *NiftyPET*.
 
 .. |mu| unicode:: 0x03BC
