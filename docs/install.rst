@@ -20,8 +20,8 @@ Installation
 
     .. code-block:: none
 
-      git clone https://github.com/pjmark/NIMPA.git
-      git clone https://github.com/pjmark/NIPET.git
+      git clone https://github.com/NiftyPET/NIMPA.git
+      git clone https://github.com/NiftyPET/NIPET.git
 
       cd ./NIMPA
       pip install --no-binary :all: --verbose -e .
@@ -191,15 +191,15 @@ The source code of full version of ``nimpa`` and ``nipet`` packages can be downl
 
 ::
 
-  git clone https://github.com/pjmark/NIMPA.git
-  git clone https://github.com/pjmark/NIPET.git
+  git clone https://github.com/NiftyPET/NIMPA.git
+  git clone https://github.com/NiftyPET/NIPET.git
 
 Alternatively, it can also be downloaded with an `SSH` key pair setup:
 
 ::
 
-  git clone git@github.com:pjmark/NIMPA.git
-  git clone git@github.com:pjmark/NIPET.git
+  git clone git@github.com:NiftyPET/NIMPA.git
+  git clone git@github.com:NiftyPET/NIPET.git
 
 After a successful download, navigate to folder ``nimpa`` and run inside one of the following:
 
