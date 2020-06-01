@@ -29,6 +29,7 @@ NiftyPET: High-throughput image reconstruction and analysis
 
    tutorials/gpuaccess.rst
    tutorials/anonym.rst
+   tutorials/lmproc.rst
    tutorials/basicrecon.rst
    tutorials/dynrecon.rst
    tutorials/corrqnt.rst

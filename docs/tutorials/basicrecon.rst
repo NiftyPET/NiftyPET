@@ -1,3 +1,4 @@
+.. _basic-recon-section:
 ===============================
 Basic PET image reconstruction
 ===============================
@@ -18,15 +19,17 @@ Prior to dealing with the raw input data, required packages need to be imported 
 
 .. code-block:: python
 
-  import numpy as np
   import sys, os, logging
+  import numpy as np
 
   # NiftyPET image reconstruction package (nipet)
   from niftypet import nipet
   # NiftyPET image manipulation and analysis (nimpa)
   from niftypet import nimpa
 
+  # control the logging output
   logging.basicConfig(level=logging.INFO)
+  
   # get all the scanner parameters
   mMRpars = nipet.get_mmrparams()
 
@@ -160,88 +163,6 @@ The sagittal image can be generated in a similar way, but choosing the slice alo
    :alt: sagittal composite of the mu-map
 
    Sagittal view of the composite of the hardware and object |mu|-maps.  Observed can be the human head between the upper and lower head&neck coils, and the patient table on the right of the head.
-
-
-
-List-mode processing with histogramming
----------------------------------------
-
-The large list-mode is processed to obtain histogrammed data (sinograms) as well as other statistics on the acquisition, including the head curves and motion detection:
-
-.. code-block:: python
-
-  hst = nipet.mmrhist(datain, mMRpars)
-
-
-
-The direct prompt and delayed sinograms can be viewed by choosing the sinogram index below 127 and from 127 up to 836 for oblique sinograms, i.e.:
-
-.. code-block:: python
-
-  # sinogram index (<127 for direct sinograms, >=127 for oblique sinograms)
-  si = 60
-
-  # prompt sinogram
-  matshow(hst['psino'][si,:,:], cmap='inferno')
-  colorbar()
-  xlabel('bins')
-  ylabel('angles')
-
-  # delayed sinogram
-  matshow(hst['dsino'][si,:,:], cmap='inferno')
-  colorbar()
-  xlabel('bins')
-  ylabel('angles')
-
-
-.. figure:: images/psino_60.png
-   :scale: 100 %
-   :alt: prompt sinogram
-
-   Direct prompt sinogram for 60 minute amyloid PET acquisition.
-
-.. figure:: images/dsino_60.png
-   :scale: 100 %
-   :alt: prompt sinogram
-
-   Direct delayed sinogram for 60 minute PET acquisition.
-
-
-
-The head-curve, which is the total number of counts detected per second across the acquisition time, for the prompt and delayed data can be plotted as follows:
-
-.. code-block:: python
-
-  plot(hst['phc'], label='prompt')
-  plot(hst['dhc'], label='delayed')
-  legend()
-  grid('on')
-  xlabel('time')
-  ylabel('counts')
-
-
-.. figure:: images/HC.png
-  :scale: 100 %
-  :alt: head curve
-
-  Head curve for prompt and delayed events for the 60-minute acquisition.
-
-
-In order to get general idea about the potential motion during the acquisition, the centre of mass of the radiodistribution along the axial direction can be plotted as follows:
-
-.. code-block:: python
-
-  plot(hst['cmass'])
-  grid('on')
-  xlabel('time')
-  ylabel('Centre of mas of radiodistribution')
-
-
-.. figure:: images/cmass.png
-  :scale: 100 %
-  :alt: centre of mass
-
-  The centre of mass of the radiodistribution for the 60-minute amyloid PET acquisition.  Very little motion is observer--the smooth, exponentially varying curve is due to the tracer kinetics.
 
 
 .. _statrec-subsection:
