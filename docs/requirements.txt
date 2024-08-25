@@ -1,2 +1,6 @@
 nbsphinx>=0.8.7
 sphinxcontrib-bibtex>=2.4.1
+requests>=2.32.2 # not directly required, pinned by Snyk to avoid a vulnerability
+tornado>=6.4.1 # not directly required, pinned by Snyk to avoid a vulnerability
+urllib3>=2.2.2 # not directly required, pinned by Snyk to avoid a vulnerability
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
