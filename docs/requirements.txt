@@ -1,2 +1,4 @@
 nbsphinx>=0.8.7
 sphinxcontrib-bibtex>=2.4.1
+jupyter-core>=5.8.0 # not directly required, pinned by Snyk to avoid a vulnerability
+requests>=2.32.4 # not directly required, pinned by Snyk to avoid a vulnerability
